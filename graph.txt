@@ -1,0 +1,37 @@
+if(msg.topic== 'test2'){
+                console.log(msg.topic);
+                var data2 = JSON.parse(msg.payload);
+                //var data=parseInt(value); 
+                console.log(data2);
+                var temp2 = data2.temperature;
+                var moist2 = data2.moisture;
+                var waterLevel2 = data2.waterLevel;
+                $(tempb).width(temp2+"%");
+                $(moistb).width(moist2+"%");
+                $(waterLevelb).width(waterLevel2+"%");
+
+				$(test12).text(temp2);
+                $(test22).text(moist2);
+                $(test32).text(waterLevel2);
+               
+			}
+
+            if(msg.topic=='test3'){
+                console.log(msg.topic);
+                var data3 = JSON.parse(msg.payload);
+                //var data=parseInt(value); 
+                console.log(data3);
+                var temp3 = data3.temperature;
+                var moist3 = data3.moisture;
+                var waterLevel3 = data3.waterLevel;
+                $(tempc).width(temp3+"%");
+                $(moistc).width(moist3+"%");
+                $(waterLevelc).width(waterLevel3+"%");
+
+				$(test13).text(temp3);
+                $(test23).text(moist3);
+                $(test33).text(waterLevel3);
+			}
+		});
+		socket.emit('subscribe',{topic: 'test1'})
+        socket.emit('subscribe',{topic: 'test2'})

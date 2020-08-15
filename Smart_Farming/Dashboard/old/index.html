@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+        <link href="card.css" rel="stylesheet">
+        <link href="sidebar.css" rel="stylesheet">
+    </head>
+
+    <body style="background-color: #a1a59f">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ONE-BOX-SOLUTION</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-plus"></span>Add Node</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>User</a></li>
+                    </ul>
+                    <!--
+<form class="navbar-form navbar-right">
+<input type="text" class="form-control" placeholder="Search...">
+</form>
+-->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-sm-2 col-md-2 sidebar" id="menu">
+
+                    <!-- sidebar -->
+                    <ul class="nav">
+                        <li><a href="#"><i class="fa fa-list-alt"></i> <span >Dashboard</span></a></li>
+                        <li>
+                            <a href="#" data-target="#item1" data-toggle="collapse"><i class="fa fa-list"></i> <span >Local Servers<span class="caret"></span></span></a>
+                            <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                                <li>
+                                    <a href="#" data-target="#item1-1" data-toggle="collapse"><span >Server-1<span class="caret"></span></span></a>
+                                    <ul class="nav nav-stacked collapse left-submenu" id="item1-1">
+                                        <li><a href="google.com">Node-1</a></li>
+                                        <li><a href="gmail.com">Node-2</a></li>
+                                        <li><a href="google.com">Node-3</a></li>
+                                        <li><a href="gmail.com">Node-4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="gmail.com">Server-2</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#"><i class="fa fa-envelope-o"></i> <span>Notifications</span></a></li>
+                        
+                        <li><a href="#"><i class="fa fa-pie-chart"></i> <span>Reports</span></a></li>
+                        
+                         <li><a href="#"><i class="fa fa-users"></i> <span>Clients</span></a></li>
+
+<!--
+                        <li>
+                            <a href="#" data-target="#item2" data-toggle="collapse"><i class="fa fa-list"></i> <span >Menu <span class="caret"></span></span></a>
+                            <ul class="nav nav-stacked collapse left-submenu" id="item2">
+                                <li><a href="google.com">View One</a></li>
+                                <li><a href="gmail.com">View Two</a></li>
+                            </ul>
+                        </li>
+-->
+                    </ul>
+                    <!-- /sidebar -->
+                </div>
+            </div>
+
+
+
+            <!--Code for Card Body Section -->
+
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ">
+                <h1 class="page-header">Dashboard</h1>
+
+                <div class="row" style="margin-top: 15vh">
+                    <div class="container">
+                        <ul class="ul_card">
+
+
+                            <li class="card">
+                                <div class="card__flipper">
+                                    <div class="card__front">
+                                        <p class="card__name"><br>Total</p>
+                                        <p class="card__num">4</p><br>
+                                        <button type="submit" class="btn btn-danger">View Details</button>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="card">
+                                <div class="card__flipper">
+                                    <div class="card__front">
+                                        <p class="card__name"><br>Active</p>
+                                        <p class="card__num">4</p><br>
+                                        <button type="submit" class="btn btn-primary">View Details</button>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="card">
+                                <div class="card__flipper">
+                                    <div class="card__front">
+                                        <p class="card__name"><br>Disable</p>
+                                        <p class="card__num">0</p><br>
+                                        <button type="submit" class="btn btn-warning">View Details</button>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="sidebar.js"></script>
+    </body>
+</html>
+

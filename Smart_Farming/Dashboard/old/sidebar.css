@@ -1,0 +1,23 @@
+#sidebar {
+    background-color: #eee;
+    padding-left: 0;
+    float: left;
+    min-height: 100%;
+}
+
+#sidebar .collapse.in {
+    display: inline;
+}
+
+#sidebar > .nav>li>a {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#menu {
+    background-color: #0c0c0c;
+    color: bisque;
+    font-family: serif sans-serif;
+    font-size: 150%;
+    font-weight: bolder;
+}

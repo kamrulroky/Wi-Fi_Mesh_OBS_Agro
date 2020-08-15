@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ds.mesh.project.custom_view.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="#8033358F"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="0dp"
+        app:civ_border_overlay="true"
+        android:layout_margin="2dp"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/tempParentView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="55dp">
+        <ds.mesh.project.custom_view.Thermometer
+            android:id="@+id/thermometer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:innerColor="#D15251"
+            app:middleColor="#dedede"
+            app:outerColor="@android:color/transparent"
+            app:radius="10dp" />
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/thermo_bubble"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:paddingRight="6dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_temp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30c"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="25dp"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="75dp"
+        android:layout_marginTop="45dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        android:textColor="#ffffff"
+        />
+
+</RelativeLayout>

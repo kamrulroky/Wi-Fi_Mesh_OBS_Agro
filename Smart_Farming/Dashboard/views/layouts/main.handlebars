@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {{!-- <meta http-equiv="refresh" content="10" /> --}}
+    <!-- Favicon icon -->
+    <title>One-Box-Solution</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/weather-icons.css">
+    {{!-- <link rel="stylesheet" href="/assets/css/stylemap.css"> --}}
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="/assets/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->   
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link href="/assets/css/card.css" rel="stylesheet">
+    <link href="/assets/css/graph.css" rel="stylesheet">
+    <link href="/assets/css/historyTable.css" rel="stylesheet">
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+            {{> _preloader}}
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+                {{> _navbar}}
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+
+
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+                {{> _sidebar}}
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+
+
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+
+
+                    {{!-- {{> _breadcrumb}} --}}
+
+                    
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+
+
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                    {{{body}}}
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+                {{> _footer}}
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="/assets/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/assets/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/assets/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!-- Flot Charts JavaScript -->
+    <script src="/assets/plugins/flot/jquery.flot.js"></script>
+    <script src="/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="/assets/js/flot-data.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    {{!-- <script src="/assets/js/graph.js"></script> --}}
+    <script src="/assets/js/history.js"></script>
+    <script src="/assets/js/graph.js"></script>
+</body>
+
+</html>

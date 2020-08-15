@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_dashboard_black_24px"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_device1"
+            android:icon="@drawable/ic_format_list_bulleted_black_24px"
+            android:title="Device 1" />
+        <item
+            android:id="@+id/nav_device2"
+            android:icon="@drawable/ic_format_list_bulleted_black_24px"
+            android:title="Device 2" />
+        <item
+            android:id="@+id/nav_device3"
+            android:icon="@drawable/ic_format_list_bulleted_black_24px"
+            android:title="Device 3" />
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_dashboard_black_24px"
+            android:title="Weather" />
+    </group>
+
+    <item android:title="">
+        <menu>
+
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_exit_to_app_black_24px"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

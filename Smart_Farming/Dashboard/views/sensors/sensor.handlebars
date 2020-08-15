@@ -1,0 +1,177 @@
+<div class="row page-titles">
+    <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+    </div>
+
+    <div class="col-md-6">
+        <select class="custom-select">
+            <option selected>Node-1(default)</option>
+            <option id="n1">Node-1</option>
+            <option id="n2">Node-2</option>
+            <option id="n3">Node-3</option>
+        </select>
+    </div>
+</div>
+
+<!-- Row -->
+<div class="row">
+<!-- Column -->
+    <div class="col-sm-4">
+        <div class="card card-danger">
+            <div class="card-block">
+                <h4 class="card-title">Soil Temperature</h4>
+                <div class="text-right">
+                    <h2 class="font-light m-b-0"><!--<i class="ti-arrow-up text-info"></i>--> 40%</h2>
+                    <span class="text-muted">Recomanded</span>
+                </div>
+                <span class="text-success" id="test11"></span>
+                <div class="progress">
+                    <div class="progress-bar bg-success" id="tempa" role="progressbar" style="height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Column -->
+<!-- Column -->
+    <div class="col-sm-4">
+        <div class="card card-success">
+            <div class="card-block">
+                <h4 class="card-title">Soil Moisture</h4>
+                <div class="text-right">
+                    <h2 class="font-light m-b-0"><!--<i class="ti-arrow-up text-info"></i>-->70%</h2>
+                    <span class="text-muted">Recomanded</span>
+                </div>
+                <span class="text-info" id="test21"></span>
+                <div class="progress">
+                    <div class="progress-bar bg-info" id="moista" role="progressbar" style="height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Column -->
+<!-- Column -->
+    <div class="col-sm-4">
+        <div class="card card-warning">
+            <div class="card-block">
+                <h4 class="card-title">Current Water Level</h4>
+                <div class="text-right">
+                    <h2 class="font-light m-b-0"><!--<i class="ti-arrow-up text-info"></i>--> 5 Meter</h2>
+                    <span class="text-muted">Recomanded</span>
+                </div>
+                <span class="text-info" id="test31"></span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" id="waterLevela" role="progressbar" style="height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Column -->
+</div>
+<!-- Row -->
+
+<div onload="getdata()">
+    <div class="row">
+        <canvas id="tempchart" height="80"></canvas>
+    </div>
+     <div class="row">
+        <canvas id="moistchart" height="80"></canvas>
+    </div>
+     <div class="row">
+        <canvas id="wlchart" height="80"></canvas>
+    </div>
+</div>
+
+
+
+
+{{!-- <script>
+    var getTopic='test1';
+    var val = '{"device": "1"}';
+    document.getElementById("n1").onclick = function () { getTopic='test1'; val='{"device": "1"}'};
+    document.getElementById("n2").onclick = function () { getTopic='test2'; val='{"device": "2"}'};
+    document.getElementById("n3").onclick = function () { getTopic='test3'; val='{"device": "3"}'};
+
+    $(document).ready(function(){
+		socket.emit('subscribe',{topic: getTopic});
+           // socket.emit('subscribe',{topic: 'test2'});
+           // socket.emit('subscribe',{topic: 'test3'});
+	});
+
+		var socket = io.connect('http://127.0.0.1:3000');
+		socket.on('connect',function(){
+			socket.on('mqtt',function(msg){
+			//console.log(msg.topic+ ' ' +msg.payload);
+			if(msg.topic== getTopic){
+                //console.log(msg.topic);
+                var data1 = JSON.parse(msg.payload);
+                //var data=parseInt(value); 
+                //console.log(data1);
+                var temp1 = data1.temperature;
+                var moist1 = data1.moisture;
+                var waterLevel1 = data1.waterLevel;
+                $(tempa).width(temp1+"%");
+                $(moista).width(moist1+"%");
+                $(waterLevela).width(waterLevel1+"%");
+
+				$(test11).text(temp1);
+                $(test21).text(moist1);
+                $(test31).text(waterLevel1);
+               
+			}   
+        socket.emit('subscribe',{topic: getTopic})
+		});
+    });
+</script> --}}
+
+
+
+
+
+
+
+
+
+
+<script>
+    var getTopic='ls';
+    var val = '{"device": "ls"}';
+    document.getElementById("n1").onclick = function () { getTopic='ls'; val='{"device": "ls"}'};
+    document.getElementById("n2").onclick = function () { getTopic='lc1'; val='{"device": "lc1"}'};
+    document.getElementById("n3").onclick = function () { getTopic='lc2'; val='{"device": "lc2"}'};
+
+    $(document).ready(function(){
+		socket.emit('subscribe',{topic: "mesh/test"});
+           // socket.emit('subscribe',{topic: 'test2'});
+           // socket.emit('subscribe',{topic: 'test3'});
+	});
+
+		var socket = io.connect('http://127.0.0.1:3000');
+		socket.on('connect',function(){
+			socket.on('mqtt',function(msg){
+			//console.log(msg.topic+ ' ' +msg.payload);
+             var data1 = JSON.parse(msg.payload);
+			if(data1.device== getTopic){
+                console.log(msg.topic);
+               
+                //var data=parseInt(value); 
+                console.log(data1);
+                var temp1 = data1.temperature;
+                var moist1 = data1.moisture;
+                var waterLevel1 = data1.waterLevel;
+                $(tempa).width(temp1+"%");
+                $(moista).width(moist1+"%");
+                $(waterLevela).width(waterLevel1+"%");
+
+				$(test11).text(temp1);
+                $(test21).text(moist1);
+                $(test31).text(waterLevel1);
+               
+			}   
+        socket.emit('subscribe',{topic: "mesh/test"})
+		});
+    });
+</script>

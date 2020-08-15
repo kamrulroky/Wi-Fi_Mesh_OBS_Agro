@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ds.mesh.project.home.view.HomeActivity"
+    tools:showIn="@layout/app_bar_home"
+    android:background="@drawable/background">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_marginTop="0dp">-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="24sp"-->
+                <!--android:text="OBS Mesh"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="16sp"-->
+                <!--android:text="Dashboard"/>-->
+
+
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="4"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+
+                <!--<android.support.design.widget.CoordinatorLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp">-->
+
+                    <!--<include layout="@layout/layout_gauge_view"/>-->
+
+                <!--</android.support.design.widget.CoordinatorLayout>-->
+
+                <!--<android.support.design.widget.CoordinatorLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp">-->
+                    <!--<include layout="@layout/layout_humidity_view"/>-->
+
+                <!--</android.support.design.widget.CoordinatorLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<android.support.design.widget.CoordinatorLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="5dp">-->
+
+                    <!--<include layout="@layout/layout_temperature_view" />-->
+
+                <!--</android.support.design.widget.CoordinatorLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:padding="5dp">-->
+
+
+                    <!--&lt;!&ndash; <include layout="@layout/layout_phone_status_view" /> &ndash;&gt;-->
+                    <!--<me.itangqi.waveloadingview.WaveLoadingView-->
+                        <!--android:id="@+id/waveLoadingView"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_weight="1"-->
+                        <!--app:wlv_borderColor="#8033358F"-->
+                        <!--app:wlv_borderWidth="3dp"-->
+                        <!--app:wlv_progressValue="40"-->
+                        <!--app:wlv_round_rectangle="true"-->
+                        <!--app:wlv_shapeType="circle"-->
+                        <!--app:wlv_titleCenterColor="@android:color/white"-->
+                        <!--app:wlv_titleCenterSize="24sp"-->
+                        <!--app:wlv_titleBottom="Water"-->
+                        <!--app:wlv_titleBottomColor="@android:color/white"-->
+
+                        <!--app:wlv_titleBottomSize="20sp"-->
+                        <!--app:wlv_triangle_direction="north"-->
+                        <!--app:wlv_waveAmplitude="70"-->
+                        <!--app:wlv_waveColor="@android:color/holo_blue_dark" />-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    </FrameLayout>
+
+</RelativeLayout>
